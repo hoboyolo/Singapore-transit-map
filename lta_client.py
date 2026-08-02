@@ -50,8 +50,7 @@ async def get_taxi_availability(client: httpx.AsyncClient) -> list[dict[str, flo
     """
     Live coordinates of every taxi currently available for hire, islandwide.
     Paginated at 500 records/call — this loop drains all pages. Unlike bus
-    data, this genuinely is a single-feed, citywide, real-time layer (the
-    "easy win" described in the README).
+    data, this genuinely is a single-feed, citywide, real-time layer.
     """
     all_coords: list[dict[str, float]] = []
     skip = 0
@@ -75,7 +74,7 @@ async def get_station_crowd_density(client: httpx.AsyncClient, train_line: str) 
     """
     Real-time crowd level per station for a given line (e.g. 'NSL', 'EWL',
     'CCL'). Used to render MRT stations as color-coded markers since actual
-    train GPS isn't available — see README for the rationale.
+    train GPS isn't available.
     """
     resp = await client.get(
         f"{BASE_URL}/PCDRealTime", headers=_headers(),
