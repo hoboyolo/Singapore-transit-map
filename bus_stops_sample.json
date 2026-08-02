@@ -1,0 +1,14 @@
+[
+  {
+    "BusStopCode": "01011",
+    "Description": "Sample Stop 1",
+    "Latitude": 1.3521,
+    "Longitude": 103.8198
+  },
+  {
+    "BusStopCode": "01012",
+    "Description": "Sample Stop 2",
+    "Latitude": 1.3550,
+    "Longitude": 103.8205
+  }
+]
